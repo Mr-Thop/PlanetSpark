@@ -1,0 +1,17 @@
+<h1>Tweets</h1>
+
+<!-- New Tweet Form -->
+<%= form_with(model: Tweet.new, remote: true) do |form| %>
+  <div class="field">
+    <%= form.text_area :content, placeholder: "What's happening?", rows: 3 %>
+  </div>
+  <div class="field">
+    <%= form.submit "Tweet", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<div id="tweets">
+  <!-- List of Tweets -->
+  <%= render @tweets %>
+</div>
+

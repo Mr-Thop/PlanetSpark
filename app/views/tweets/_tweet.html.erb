@@ -1,0 +1,7 @@
+<div class="tweet">
+  <p><%= tweet.content %></p>
+  <%= link_to 'Show', tweet %>
+  <%= link_to 'Edit', edit_tweet_path(tweet) %>
+  <%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+
